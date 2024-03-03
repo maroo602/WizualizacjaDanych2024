@@ -50,7 +50,7 @@
 # print(b)
 # print(type(b))
 
-#lista = [5, 6.6, 34, 'a', 'b', [2, 3, 4], 'ab']
+lista = [5, 6.6, 34, 'a', 'b', [2, 3, 4], 'ab']
 # print(lista)
 # lista.append(67)
 # print(lista)
@@ -84,11 +84,42 @@
 # del slownik[6]
 # print(slownik)
 
-a=8
-b=8
-if a>b:
-    print("a is greater than b")
-elif a<b:
-    print("a is less than b")
+# a=8
+# b=8
+# if a>b:
+#     print("a is greater than b")
+# elif a<b:
+#     print("a is less than b")
+# else:
+#     print("a is equal to b")
+
+    # a = int(input())
+    # b = int(input())
+    # c = int(input())
+    # d = int(input())
+    #
+    # if (a>b) & (c>d):
+    #     print(a, c)
+    # else:
+    #     print(b, d)
+
+# for i in range(1, 8, 2):
+#     print(i)
+# else:
+#     print('koniec petli')
+
+# for i in lista:
+#     print(i)
+
+# for i in range(0,5):
+#     for j in range(0,5):
+#         result=i+j
+#         print(result)
+#     print('')
+
+licznik = 0
+while licznik < len(lista):
+    print(lista[licznik])
+    licznik += 1
 else:
-    print("a is equal to b")
+    print('koniec listy')
