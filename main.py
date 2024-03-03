@@ -1,67 +1,85 @@
-import tkinter as tk
+# a = 56
+# print(a)
+# print(type(a))
+# b = 5.5
+# print(b)
+# print(type(b))
+# zmienna_tekstowa = 'wizualizacja danych'
+# print(zmienna_tekstowa)
+# print(type(zmienna_tekstowa))
 
-def dodaj_liczbe(liczba):
-    wprowadzenie.set(wprowadzenie.get() + str(liczba))
 
-def oblicz_wynik():
-    try:
-        wprowadzenie.set(eval(wprowadzenie.get()))
-    except Exception as e:
-        wprowadzenie.set("Błąd")
+#a = 6.55
+#b = 3
 
-def wyczysc_wprowadzenie():
-    wprowadzenie.set("")
+#c = a + b
+#print(c)
+#d = a - b
+#print(d)
+#e = 4
+#f = b // a
+#print(f)
+#f = a // b
+#print(f)
+#g = a ** 2
+#print(g)
+#h = pow(a, 2)
+#print(h)
 
-root = tk.Tk()
-root.title("Kalkulator")
+#i = 6 ** (1/2)
+#j = pow(6, 1 / 2)
+#print(i)
+#print(j)
 
-wprowadzenie = tk.StringVar()
-wprowadzenie.set("")
+#k= 'wizualizacja danych '
+#l='grupa '
+#m=1
+#print(k + l + str(m))
+#print('Liczba a jest rowna {:.2f}, liczba b jest rowna {:d}'.format(a, b))
+# import sys
+#
+# a=input('Wprowadz liczbe: ')
+# print(a + ' to wartosc liczby a')
+# print(type(a))
+# a= int(a)
+# print(a*5)
+# print(type(a))
+#
+# sys.stdout.write('Wprowadz liczbe: ')
+# b= sys.stdin.readline()
+# print(b)
+# print(type(b))
 
-frame = tk.Frame(root, padx=10, pady=10)
-frame.grid(row=0, column=0, columnspan=4)
+#lista = [5, 6.6, 34, 'a', 'b', [2, 3, 4], 'ab']
+# print(lista)
+# lista.append(67)
+# print(lista)
+# lista.insert(2, 'c')
+# print(lista)
+# lista.extend([20, 21, 22])
+# print(lista)
+# lista.pop()
+# print(lista)
+# lista.pop(2)
+# print(lista)
+# lista.remove([2,3,4])
+# print(lista)
+# del lista[1]
+# print(lista)
+# #del lista
+# lista.reverse()
+# print(lista)
+# lista.sort()
+# print(lista)
 
-entry = tk.Entry(frame, textvariable=wprowadzenie, font=('Arial', 20), bd=10, insertwidth=4, width=14, justify='right')
-entry.grid(row=0, column=0, columnspan=4)
-
-button7 = tk.Button(frame, text='7', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(7))
-button8 = tk.Button(frame, text='8', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(8))
-button9 = tk.Button(frame, text='9', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(9))
-button_plus = tk.Button(frame, text='+', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe('+'))
-
-button4 = tk.Button(frame, text='4', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(4))
-button5 = tk.Button(frame, text='5', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(5))
-button6 = tk.Button(frame, text='6', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(6))
-button_minus = tk.Button(frame, text='-', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe('-'))
-
-button1 = tk.Button(frame, text='1', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(1))
-button2 = tk.Button(frame, text='2', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(2))
-button3 = tk.Button(frame, text='3', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(3))
-button_mnozenie = tk.Button(frame, text='*', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe('*'))
-
-button0 = tk.Button(frame, text='0', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe(0))
-button_clear = tk.Button(frame, text='C', padx=20, pady=20, font=('Arial', 20), command=wyczysc_wprowadzenie)
-button_dzielenie = tk.Button(frame, text='/', padx=20, pady=20, font=('Arial', 20), command=lambda: dodaj_liczbe('/'))
-button_wynik = tk.Button(frame, text='=', padx=20, pady=20, font=('Arial', 20), command=oblicz_wynik)
-
-button7.grid(row=1, column=0)
-button8.grid(row=1, column=1)
-button9.grid(row=1, column=2)
-button_plus.grid(row=1, column=3)
-
-button4.grid(row=2, column=0)
-button5.grid(row=2, column=1)
-button6.grid(row=2, column=2)
-button_minus.grid(row=2, column=3)
-
-button1.grid(row=3, column=0)
-button2.grid(row=3, column=1)
-button3.grid(row=3, column=2)
-button_mnozenie.grid(row=3, column=3)
-
-button0.grid(row=4, column=0)
-button_clear.grid(row=4, column=1)
-button_dzielenie.grid(row=4, column=2)
-button_wynik.grid(row=4, column=3)
-
-root.mainloop()
+slownik = {'klucz': 'wartosc', 1: 2, 'a': 5, 4: 'b'}
+print(slownik)
+print(slownik[4])
+slownik[6]= 45
+print(slownik)
+slownik.pop(1)
+print(slownik)
+print(slownik.keys())
+print(slownik.values())
+del slownik[6]
+print(slownik)
