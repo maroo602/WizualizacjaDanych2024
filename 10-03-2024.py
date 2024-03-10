@@ -25,7 +25,8 @@
 # print(s2)
 # s3={v:k for k, v in s1.items()}
 # print(s3)
-import math
+from math import *
+# albo import math
 
 # def rownanie_kwadratowe(a, b, c):
 #     delta = b**2-4*a*c
@@ -46,4 +47,31 @@ import math
 # print(rownanie_kwadratowe(1, 2, 1))
 # print(rownanie_kwadratowe(2, 6, 1))
 
-def dlugosc_odcinka(x1=1, x2=2, y1=3, y2=4):
+# def dlugosc_odcinka(x1=1, x2=2, y1=3, y2=4):
+#     return sqrt((x1-x2)**2 + (y1-y2)**2)
+#
+# print (dlugosc_odcinka())
+# print (dlugosc_odcinka(3, 5, 1, 6))
+# print (dlugosc_odcinka(y1=5, x1=3, y2=6, x2=8))
+# print (dlugosc_odcinka(1, 5, y2=8, y1=3))
+
+# plik = open('tekst.txt', 'r', encoding='utf-8')
+# plik.read(10)
+# linia= plik.readline()
+# linie = plik.readlines()
+# plik.close()
+# print(znak)
+# print(linia)
+# print(linie)
+
+
+# plik= open('tekst.txt', 'a+')
+# plik.write('git')
+# znaki= plik.read(10)
+# plik.seek(105)
+# plik.close
+# print(znaki)
+
+with open ('tekst.txt', 'r') as plik:
+    znaki=plik.read(10)
+print (znaki)
