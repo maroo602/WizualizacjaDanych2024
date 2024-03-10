@@ -71,7 +71,7 @@ from math import *
 # plik.seek(105)
 # plik.close
 # print(znaki)
-
-with open ('tekst.txt', 'r') as plik:
-    znaki=plik.read(10)
-print (znaki)
+# 
+# with open ('tekst.txt', 'r') as plik:
+#     znaki=plik.read(10)
+# print (znaki)
