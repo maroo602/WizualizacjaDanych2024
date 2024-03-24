@@ -82,18 +82,18 @@ import numpy as np
 # print(zn6)
 # print(zn7)
 
-mat= np.ones((2,2))
-mat_1= np.ones((2,2))
-mat=mat+mat_1
-print(mat)
-print(mat - mat_1)
-print(mat*mat_1)
-print(mat/mat_1)
+# mat= np.ones((2,2))
+# mat_1= np.ones((2,2))
+# mat=mat+mat_1
+# print(mat)
+# print(mat - mat_1)
+# print(mat*mat_1)
+# print(mat/mat_1)
 
-a=np.dot(mat, mat_1)
-print(a)
-b=mat.dot(mat_1)
-print(b)
+# a=np.dot(mat, mat_1)
+# print(a)
+# b=mat.dot(mat_1)
+# print(b)
 # a=np.dot(mat, mat_1)
 # print(a)
 # b=mat.dot(mat_1)
@@ -119,12 +119,12 @@ print(b)
 # print(mat[:, range(2,6,2)])
 # print('')
 
-x = np.array([[0, 1, 2],
-              [3, 4, 5],
-              [6, 7, 8],
-              [9, 10, 11]])
-print(x)
-rows = np.array([[0, 0], [3, 3]])
-cols = np.array([[0, 2], [0, 2]])
-y = x[rows, cols]
-print(y)
+# x = np.array([[0, 1, 2],
+#               [3, 4, 5],
+#               [6, 7, 8],
+#               [9, 10, 11]])
+# print(x)
+# rows = np.array([[0, 0], [3, 3]])
+# cols = np.array([[0, 2], [0, 2]])
+# y = x[rows, cols]
+# print(y)
