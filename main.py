@@ -88,19 +88,30 @@ from PIL import Image
 # fig.delaxes(axs[2,1])
 # plt.show()
 
-data={'Kraj': ['Belgia', 'Indie', 'Brazylia', 'Polska'],
-      'Stolica': ['Bruksela', 'New Delhi', 'Brasilia', 'Warszawa'],
-      'Kontynent': ['Europa', 'Azja', 'Ameryka Południowa', 'Europa'],
-      'Populacja': [11190846,1303171035,207847528,38675467]}
-df=pd.DataFrame(data)
+# data={'Kraj': ['Belgia', 'Indie', 'Brazylia', 'Polska'],
+#       'Stolica': ['Bruksela', 'New Delhi', 'Brasilia', 'Warszawa'],
+#       'Kontynent': ['Europa', 'Azja', 'Ameryka Południowa', 'Europa'],
+#       'Populacja': [11190846,1303171035,207847528,38675467]}
+# df=pd.DataFrame(data)
+# print(df)
+# grupa=df.groupby('Kontynent')
+# etykiety=list(grupa.groups.keys())
+# wartosci=list(grupa.agg('Populacja').sum())
+# fig, ax = plt.subplots()
+# ax.bar(x=etykiety, height=wartosci, color=['yellow', 'green', 'red'])
+# ax.set_xlabel('Kontynenty')
+# ax.set_ylabel('Populacja w mld')
+# ax.ticklabel_format(axis='y', style='plain')
+# fig.subplots_adjust(left=0.2)
+# plt.show()
+
+df=pd.read_csv('dane.csv', header=0, sep=';', decimal=".")
 print(df)
-grupa=df.groupby('Kontynent')
-etykiety=list(grupa.groups.keys())
-wartosci=list(grupa.agg('Populacja').sum())
-fig, ax = plt.subplots()
-ax.bar(x=etykiety, height=wartosci, color=['yellow', 'green', 'red'])
-ax.set_xlabel('Kontynenty')
-ax.set_ylabel('Populacja w mld')
-ax.ticklabel_format(axis='y', style='plain')
-fig.subplots_adjust(left=0.2)
+explode=(0.0, 0.1)
+seria=df.groupby('Imię i nazwisko')['Wartość zamówienia'].sum()
+wedges,texts,autotext=plt.pie(x=seria, labels=seria.index, autopct=lambda pct:"{:.1f}%".format(pct),textprops=dict(color="black"),colors=['red','green'],
+                              pctdistance=1.2,labeldistance=1.1,hatch=['*O','O'],shadow=True,explode=explode)
+plt.title('Suma zamówień dla sprzedawców')
+plt.legend(loc='lower right')
+plt.ylabel('Procentowy wynik wartości zamówienia')
 plt.show()
