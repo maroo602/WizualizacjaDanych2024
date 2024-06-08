@@ -51,3 +51,20 @@ plt.ylabel('wykres funkcji')
 plt.grid(True)
 plt.savefig('marceli_budny_zad4.png')
 plt.show()
+Oczywiście, oto jak możesz stworzyć wykres kołowy za pomocą **Matplotlib**:
+
+```python
+import matplotlib.pyplot as plt
+
+# Przyjmujemy, że df2 to DataFrame, a 'column' to nazwa kolumny, którą chcesz przedstawić na wykresie
+values = df2['column'].value_counts()
+labels = df2['column'].value_counts().index
+
+fig, ax = plt.subplots()
+ax.pie(values, labels=labels, autopct='%1.2f%%')
+ax.set_aspect('equal')  # To sprawia, że wykres jest kołowy, a nie eliptyczny
+
+plt.show()
+```
+
+Pamiętaj, że musisz zastąpić `'column'` nazwą kolumny, którą chcesz przedstawić na wykresie. Ten kod stworzy wykres kołowy dla danej kolumny DataFrame `df2`.
